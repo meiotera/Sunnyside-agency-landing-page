@@ -21,7 +21,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: 90vh;
     
 }
 header .menu{
@@ -34,6 +34,14 @@ header .menu{
     padding: 10px;
     color: white;
     font-family: barlow;
+}
+.menu nav a:hover {
+    background: white;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-family: fraunces;
+    font-weight: bold;
+    color:hsl(212, 27%, 19%);    
 }
 #menubar {
     display: none;
@@ -50,7 +58,7 @@ header .menu{
     margin-bottom: 80px;
 }
 .descricao {
-    text-align: center;   
+    text-align: center;
 }
 
 
@@ -130,13 +138,18 @@ picture {
     color: hsl(198, 62%, 26%);
     position: absolute;    
     bottom: 30px;
-    max-width: 280px;
+    max-width: 280px;    
 }
 .acerola {
     color: hsl(167, 40%, 24%);
     position: absolute;
     bottom: 30px;
-    max-width: 280px;
+    max-width: 280px;   
+}
+.acerola p, .laranja p {
+    margin-top: 30px;
+    font-family: barlow;
+    font-size: 1.1em;
 }
 
 /*Depoimentos*/
@@ -294,16 +307,28 @@ footer {
         cursor: pointer;
     }
     .menu nav {
+        display: flex;
+        flex-direction: column;
         position: fixed;                
-        top: 70px;              
+        top: 150px;              
         transition: all 1s;
         right: -100%;
-        background: #FDD602;
-        padding: 8px;       
-        border-radius: 10px 0 0 10px;
+        background: white;
+        justify-content: center;
+        align-items:center;
+        height: 50%;
+        width: 70%;
+        padding: 8px;     
+        
+        
     }    
+    .menu nav a {
+        color: hsl(232, 10%, 55%);
+        line-height: 3;
+    }
+    
     #check:checked ~ nav {
-        right: .01%;           
+        right: 12%;           
     }
 }
 @media (max-width: 460px){
